@@ -3,6 +3,8 @@ var router = express.Router();
 var db = require('../db');
 var shortid = require('shortid');
 
+
+
 router.get('/', (req, res) => {
     res.render('users/index', {
         users : db.get('users').value()
@@ -35,7 +37,7 @@ router.get('/:id', (req, res) =>{
     })
 })
 
-router.post('/create', (req, res) => {
+router.post('/create' ,(req, res) => {
     req.body.id = shortid.generate();
     db.get('users').push(req.body).write();
     res.redirect('/users');
