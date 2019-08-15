@@ -1,6 +1,17 @@
-h1 Create user
+extends ../layout/layout
 
-form(action="/users/create" method='POST')
-    label Name
-    input(type="text", name='name')
-    button Create
+block content
+    h1 Create user
+
+    if errors
+        each error in errors
+            .alert.alert-danger= error
+
+    form(action="/users/create" method='POST')
+        .form-group
+            label(for='name') Name
+            input#name(type="text", name='name',class='form-control',value=values ? values.name : '')
+        .form-group
+            label(for = 'phone') Phone
+            input#phone(type="text", name='phone',class='form-control',value=values ? values.phone : '')
+        button.btn.btn-primary.ml-2 Create

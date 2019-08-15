@@ -1,7 +1,10 @@
-h1 User info
+extends ../layout/layout
 
-p
-    b Name 
-    span= user.name
+block content
+    h1 User info
 
-a(href="/users") Users list
+    p
+        b Name 
+        span= user.name
+
+    a(href="/users") Users list
