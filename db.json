@@ -2,36 +2,16 @@
   "users": [
     {
       "name": "Bang",
+      "email": "PPB@gmail.com",
+      "password": "1234",
       "id": "-xWwa_BLs"
     },
     {
       "name": "Dat",
-      "id": "arUrZKw2N"
-    },
-    {
-      "name": "Van",
-      "id": "ky5LZQ8PH"
-    },
-    {
-      "name": "Nagamo",
-      "id": "_dmcewj1R"
-    },
-    {
-      "name": "Bitch",
-      "id": "n5m5q99LJ"
-    },
-    {
-      "name": "aaaa",
-      "id": "DJXg4QkJd"
-    },
-    {
-      "name": "123",
-      "id": "T8gF9mc-u"
-    },
-    {
-      "name": "ABC",
-      "phone": "0123123123",
-      "id": "pCFMt6gL3"
+      "phone": "01010101010",
+      "email": "",
+      "password": "",
+      "id": "-BKugkXGO"
     }
   ]
 }
