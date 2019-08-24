@@ -5,7 +5,9 @@ var cookieParser = require('cookie-parser');
  
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
+var productRoute = require('./routes/product.route');
 var authMiddleware = require('./middleware/auth.middleware');
+
 
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -16,15 +18,16 @@ app.use(cookieParser())
 
 var port = 3000;
 
-app.use('/users',authMiddleware.authRequire, userRoute);
 app.use('/auth', authRoute);
+app.use('/users',authMiddleware.authRequire, userRoute);
+app.use('/product', productRoute);
+
 
 app.get('/', (req, res) => {
     res.render('index', {
         name : 'Bang'
     });
 });
-
 
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

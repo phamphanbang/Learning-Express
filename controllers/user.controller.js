@@ -31,9 +31,11 @@ module.exports.get = (req, res) =>{
     var user = db.get('users').find({id : id}).value();
 
     res.render('users/view', {
-        user : user 
+        user : user,
     })
 };
+
+
 
 module.exports.postCreate = (req, res) => {
     req.body.id = shortid.generate();
